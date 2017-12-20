@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Toaster Scout</string>
     <string name="Home_Screen_Headline">Powered by Something</string>
+
     <!-- Button Text -->
     <string name="createNewMatch">Create New Match</string>
     <string name="selectSavedCompetition">Select Saved Competition</string>
