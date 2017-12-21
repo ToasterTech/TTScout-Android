@@ -9,7 +9,6 @@ import org.supercsv.io.ICsvBeanReader;
 import org.supercsv.io.ICsvBeanWriter;
 import org.supercsv.prefs.CsvPreference;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -19,6 +18,9 @@ import java.util.ArrayList;
  * This will essentially be a static class that we will call read/write functions from.
  */
 public class FileManager {
+
+    private static String scoutName = "";
+
     /**
      * This is pretty much a list of all the matches we are working with at the moment.
      */
@@ -47,12 +49,6 @@ public class FileManager {
 
     }
 
-    /**
-     * This will pretty much create our directory. It launches the FIle Chooser.
-     */
-    public static void setupDirectory(){
-        FileManager.currentDirectory = new File(System.getProperty("user.dir"));
-    }
 
     /**
      * Writes all of our matches to the file for our competition.

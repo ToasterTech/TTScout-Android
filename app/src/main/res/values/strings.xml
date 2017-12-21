@@ -4,7 +4,7 @@
 
     <!-- Button Text -->
     <string name="createNewMatch">Create New Match</string>
-    <string name="selectSavedCompetition">Select Saved Competition</string>
+    <string name="startScoutingText">Start Scouting</string>
 
 
 </resources>
