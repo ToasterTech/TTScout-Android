@@ -1,5 +1,7 @@
 package org.toastertech.toasterscout.data;
 
+import android.os.Environment;
+import android.widget.Toast;
 import org.supercsv.cellprocessor.ConvertNullTo;
 import org.supercsv.cellprocessor.ParseInt;
 import org.supercsv.cellprocessor.ift.CellProcessor;
@@ -50,6 +52,18 @@ public class FileManager {
     }
 
 
+    public static void setupDirectory(){
+        currentDirectory = new File(Environment.getExternalStorageDirectory(), "Toaster Scout");
+
+        if(!currentDirectory.exists()){
+            if(currentDirectory.mkdir()){
+                System.out.println("DIRECTORY CREATED");
+            } else {
+                System.out.println("DIRECTORY FAILED");
+            }
+        }
+    }
+
     /**
      * Writes all of our matches to the file for our competition.
      *
@@ -57,6 +71,7 @@ public class FileManager {
      */
     public static void writeFile() throws Exception{
         currentFile = new File(currentDirectory, currentCompetition + ".csv");
+
 
         ICsvBeanWriter writer = new CsvBeanWriter(new FileWriter(currentFile, false), CsvPreference.STANDARD_PREFERENCE);
 
