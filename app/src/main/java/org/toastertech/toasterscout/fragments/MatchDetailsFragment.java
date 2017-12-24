@@ -44,7 +44,23 @@ public class MatchDetailsFragment extends Fragment {
         scoutNameField.setText(match.getScoutName());
     }
 
-    public String[] getValues(){
-        return new String[]{matchNumField.getText().toString(), teamNumField.getText().toString(), scoutNameField.getText().toString()};
+    public int getMatchNum(){
+        if(matchNumField.getText().toString().length() > 0){
+            return Integer.valueOf(matchNumField.getText().toString());
+        }
+
+        return 0;
+    }
+
+    public int getTeamNum(){
+        if(teamNumField.getText().toString().length() > 0) {
+            return Integer.valueOf(teamNumField.getText().toString());
+        }
+
+        return 0;
+    }
+
+    public String getScoutName(){
+        return scoutNameField.getText().toString();
     }
 }
