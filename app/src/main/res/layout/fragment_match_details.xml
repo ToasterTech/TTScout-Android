@@ -36,7 +36,7 @@
                   android:layout_weight=".5" android:gravity="center_horizontal" android:textColor="@android:color/black"/>
 
         <EditText android:layout_height="wrap_content" android:layout_width="0dp" android:layout_weight=".5"
-                  android:id="@+id/scoutNameTextField" android:inputType="number"/>
+                  android:id="@+id/scoutNameTextField" android:inputType="text"/>
 
 
     </LinearLayout>
